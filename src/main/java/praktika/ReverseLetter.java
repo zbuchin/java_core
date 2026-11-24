@@ -1,8 +1,11 @@
 package praktika;
 
 public class ReverseLetter {
-    public static void main(String[] args) {
-        char[] chars = "J@va the be$t!123".toCharArray();
+    public static String reverseLetters(String s) {
+        if (s == null){
+            return null;
+        }
+        char[] chars = s.toCharArray();
         int left = 0;
         int right = chars.length - 1;
 
@@ -20,7 +23,10 @@ public class ReverseLetter {
             }
         }
 
-        System.out.println(new String(chars));
+        return new String(chars);
 
+    }
+    public static void main(String[] args){
+        System.out.println(reverseLetters("J@va the be$t!123"));
     }
 }
